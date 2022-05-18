@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #0A2463;
+    --secondary-color: #3E92CC;
+    --tertiary-color: #FFFAFF;
+    --quaternary-color: #D8315B;
+    --contrast-color: #1E1B18;
+}
+
+.navbar {
+    background: var(--primary-color) !important;
+}
+
+.navbar-brand {
+    color: var(--tertiary-color) !important;
+}
+
+.navbar-collapse {
+    align-items: flex-start;
+}
+
+.navbar .nav-link {
+    color: var(--tertiary-color) !important;
+    padding: .5rem 0;
+    position: relative;
+}
+
+.navbar .nav-link::before {
+    background: var(--tertiary-color);
+    bottom: 4px;
+    content: ' ';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: width 200ms linear;
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .navbar .nav-link {
+        margin-right: .75rem;
+    }
+
+    .navbar .nav-link::before {
+        width: 0;
+    }
+
+    .navbar .nav-link:hover::before {
+        width: 100%;
+    }
+}
