@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 :root {
     --primary-color: #0A2463;
     --secondary-color: #3E92CC;
@@ -6,8 +8,14 @@
     --contrast-color: #1E1B18;
 }
 
+html,
+body {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
 .navbar {
     background: var(--primary-color) !important;
+    margin-bottom: 1rem;
 }
 
 .navbar-brand {
@@ -35,7 +43,43 @@
     width: 100%;
 }
 
+.navbar .nav-link.active::before {
+    width: 100%;
+}
 
+.cv__name {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.cv__profession {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.cv__label {
+    background: var(--contrast-color);
+    color: var(--tertiary-color);
+    display: inline-block;
+    margin-bottom: .1rem;
+    padding: .3rem;
+    text-transform: uppercase;
+}
+
+.cv__label--icon {
+    align-items: center;
+    display: inline-flex;
+    height: 2rem;
+    margin-right: .5rem;
+    justify-content: center;
+    width: 2rem;
+}
+
+.cv__info {
+    align-items: center;
+    display: flex;
+    margin-bottom: .1rem;
+}
 
 @media screen and (min-width: 768px) {
     .navbar .nav-link {
