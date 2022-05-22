@@ -1,37 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
-    --primary-color: #0A2463;
-    --secondary-color: #3E92CC;
-    --tertiary-color: #FFFAFF;
-    --quaternary-color: #D8315B;
-    --contrast-color: #1E1B18;
+    --primary-color: #29335C;
+    --secondary-color: #53A2BE;
+    --tertiary-color: #FBFBF2;
+    --quaternary-color: #CC2936;
+    --contrast-color: #0F110C;
 }
-
 html,
 body {
+    background: var(--tertiary-color);
     font-family: 'Ubuntu', sans-serif !important;
 }
-
 .navbar {
     background: var(--primary-color) !important;
     margin-bottom: 1rem;
 }
-
 .navbar-brand {
     color: var(--tertiary-color) !important;
 }
-
 .navbar-collapse {
     align-items: flex-start;
 }
-
 .navbar .nav-link {
     color: var(--tertiary-color) !important;
     padding: .5rem 0;
     position: relative;
 }
-
 .navbar .nav-link::before {
     background: var(--tertiary-color);
     bottom: 4px;
@@ -42,21 +37,17 @@ body {
     transition: width 200ms linear;
     width: 100%;
 }
-
 .navbar .nav-link.active::before {
     width: 100%;
 }
-
 .cv__name {
     font-size: 2rem;
     line-height: 2rem;
 }
-
 .cv__profession {
     font-size: 1.5rem;
     line-height: 1.5rem;
 }
-
 .cv__label {
     background: var(--contrast-color);
     color: var(--tertiary-color);
@@ -65,7 +56,6 @@ body {
     padding: .3rem;
     text-transform: uppercase;
 }
-
 .cv__label--icon {
     align-items: center;
     display: inline-flex;
@@ -74,23 +64,72 @@ body {
     justify-content: center;
     width: 2rem;
 }
-
 .cv__info {
     align-items: center;
     display: flex;
     margin-bottom: .1rem;
 }
+.pfp {
+    border-radius: 50%;
+    display: block;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    max-width: 300px;
+    width: 100%;
+}
+.cv__section__title {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+.cv__section {
+    margin-bottom: 1rem;
+}
+.cv__section__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cv__section__subtitle {
+    display: flex;
+    font-weight: 700;
+    justify-content: space-between;
+}
+.cv__section__tools {
+    font-family: monospace;
+    font-weight: 700;
 
+}
 @media screen and (min-width: 768px) {
     .navbar .nav-link {
         margin-right: .75rem;
     }
-
     .navbar .nav-link::before {
         width: 0;
     }
-
     .navbar .nav-link:hover::before {
         width: 100%;
+    }
+    .pfp {
+        margin-bottom: 0;
+    }
+    .cv__section__layout {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: .5rem;
+    }
+    .cv__section__date {
+        grid-column: 1 / 2;
+    }
+    .cv__section__subtitle {
+        grid-column: 2 / 3;
+    }
+    .cv__section__description {
+        grid-column: 2 / 3;
+        grid-row: 2;
+        margin-bottom: 0;
+    }
+    .cv__section__tools {
+        grid-column: 2 / 3;
+        grid-row: 3;
     }
 }
