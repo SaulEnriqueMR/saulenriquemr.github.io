@@ -97,7 +97,22 @@ body {
 .cv__section__tools {
     font-family: monospace;
     font-weight: 700;
-
+}
+.iframe-cont {
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.block-black {
+    background: rgba(15, 17, 12, .75);
+}
+.github-link {
+    color: var(--secondary-color);
 }
 @media screen and (min-width: 768px) {
     .navbar .nav-link {
